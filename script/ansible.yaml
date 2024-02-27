@@ -20,6 +20,7 @@
         - git
         - ripgrep
         - tmux
+        - exa
       state: present
   - name: Clone nvim config
     ansible.builtin.git:
