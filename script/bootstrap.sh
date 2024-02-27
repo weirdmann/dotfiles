@@ -3,3 +3,4 @@ cd ..
 # ln -s <file that the link will lead to> <link name>
 #
 ln -s .tmux.conf ~/.tmux.conf
+ln -s .zshrc ~/.zshrc
