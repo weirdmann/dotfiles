@@ -6,6 +6,11 @@
     become: yes
     ansible.builtin.apt_repository:
       repo: ppa:neovim-ppa/unstable
+  - name: Update and upgrade apt packages
+    become: true
+    apt:
+      update_cache: yes
+      upgrade: 'yes'
   - name: Install packages with apt
     become: yes
     ansible.builtin.apt:
