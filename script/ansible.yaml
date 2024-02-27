@@ -1,0 +1,24 @@
+- name: Bootstrap development environment
+  hosts: localhost
+
+  tasks:
+  - name: Add neovim unstable apt repository
+    become: yes
+    ansible.builtin.apt_repository:
+      repo: ppa:neovim-ppa/unstable
+  - name: Install packages with apt
+    become: yes
+    ansible.builtin.apt:
+      name:
+        - zsh
+        - neovim
+        - git
+        - ripgrep
+        - tmux
+      state: present
+  - name: Clone nvim config
+    ansible.builtin.git:
+      repo: 'https://github.com/weirdmann/nvim'
+      dest: '~/.config/nvim' 
+      clone: yes
+
