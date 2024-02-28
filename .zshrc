@@ -100,5 +100,8 @@ plugins=(git)
 #
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # 
+alias ls="exa --oneline --group-directories-first -H"
+alias la="exa --header --group --group-directories-first -blaHF"
+alias tr="exa --tree --level 2 --group-directories-first -bl"
 alias tm="~/tm.sh"
 eval "$(starship init zsh)"
