@@ -21,6 +21,7 @@
         - ripgrep
         - tmux
         - exa
+        - fzf
       state: present
   - name: Clone nvim config
     ansible.builtin.git:
