@@ -111,4 +111,8 @@ alias ls="exa --oneline --group-directories-first -H"
 alias la="exa --header --group --group-directories-first -blaHF"
 alias tr="exa --tree --level 2 --group-directories-first -bl"
 alias tm="~/tm.sh"
+alias py="python3.11"
 eval "$(starship init zsh)"
+alias cal="ncal -bw -A 8"
+
+alias pls="/home/cloo/.local/bin/pls"

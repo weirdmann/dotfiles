@@ -6,6 +6,10 @@
     become: yes
     ansible.builtin.apt_repository:
       repo: ppa:neovim-ppa/unstable
+  - name: Add alacritty apt repository
+    become: yes
+    ansible.builtin.apt_repository:
+      repo: ppa:aslatter/ppa
   - name: Update and upgrade apt packages
     become: true
     apt:
@@ -22,6 +26,8 @@
         - tmux
         - exa
         - fzf
+        - alacritty
+        - ncal
       state: present
   - name: Clone nvim config
     ansible.builtin.git:
