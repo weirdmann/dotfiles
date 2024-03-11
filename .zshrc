@@ -115,6 +115,6 @@ alias py="python3.11"
 eval "$(starship init zsh)"
 alias cal="ncal -Mbw -A 8"
 
-eval "curl -s https://api.quotable.io/random\?tags=change | python3 ~/dotfiles/utils/quotes.py" 
+eval "python3 ~/dotfiles/utils/quotes.py" 
 eval "task '( due.before:2d or blocking ) ' minimal"
 export COLORTERM=truecolor
