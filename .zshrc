@@ -113,6 +113,8 @@ alias tr="exa --tree --level 2 --group-directories-first -bl"
 alias tm="~/tm.sh"
 alias py="python3.11"
 eval "$(starship init zsh)"
-alias cal="ncal -bw -A 8"
+alias cal="ncal -Mbw -A 8"
 
-alias pls="/home/cloo/.local/bin/pls"
+eval "curl -s https://api.quotable.io/random\?tags=change | python3 ~/dotfiles/utils/quotes.py" 
+eval "task '( due.before:2d or blocking ) ' minimal"
+export COLORTERM=truecolor
