@@ -107,6 +107,7 @@ setopt MENU_COMPLETE
 autoload -U compinit; compinit
 source ~/.zsh/fzf-tab/fzf-tab.plugin.zsh
 
+alias zshrc="nvim /home/cloo/.zshrc"
 alias ls="exa --oneline --group-directories-first -H"
 alias la="exa --header --group --group-directories-first -blaHF"
 alias tr="exa --tree --level 2 --group-directories-first -bl"
@@ -116,5 +117,12 @@ eval "$(starship init zsh)"
 alias cal="ncal -Mbw -A 8"
 
 eval "python3 ~/dotfiles/utils/quotes.py" 
-eval "task '( due.before:2d or blocking ) ' minimal"
+eval "task '(active or due.before:eow ) ' minimal"
 export COLORTERM=truecolor
+
+#alias t='clear;task'
+t() {
+  clear;
+  task $@;
+}
+flip() { echo -n "（╯°□°）╯ ┻━┻" | clip.exe; }
